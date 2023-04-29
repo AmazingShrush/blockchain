@@ -1,0 +1,135 @@
+{
+	"compiler": {
+		"version": "0.8.6+commit.11564f7e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_prosumer",
+						"type": "address"
+					},
+					{
+						"internalType": "int256",
+						"name": "energyUnits",
+						"type": "int256"
+					}
+				],
+				"name": "buyEnergy",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "buyerQueue",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "prosumers",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "ID",
+						"type": "address"
+					},
+					{
+						"internalType": "int256",
+						"name": "energyStatus",
+						"type": "int256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "balance",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "isRegistered",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "sellerQueue",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"finalcontracts.sol": "P2PEnergy"
+		},
+		"evmVersion": "berlin",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"finalcontracts.sol": {
+			"keccak256": "0x80ab6600892b6ae2cce324c6b77195e5a72cf321153f1bcfb44baeede7a2c8a6",
+			"urls": [
+				"bzz-raw://84908626d8d1820d327479ef9b4d4efdaf79c6b07b30656494c95ae1c1c81523",
+				"dweb:/ipfs/QmSrFcXwsNzUzTcRtxS5kxUSuYUB4SE3ie2VRqTv5U1Dyi"
+			]
+		}
+	},
+	"version": 1
+}
