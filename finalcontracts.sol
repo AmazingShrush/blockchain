@@ -8,9 +8,9 @@ contract P2PEnergy{
         bool isRegistered;
     }
 
-    mapping(address => Prosumer)public prosumers;
-    address[] public buyerQueue;
-    address[] public sellerQueue;
+    mapping(address => Prosumer) internal prosumers;
+    address[] internal buyerQueue;
+    address[] internal sellerQueue;
     function registerProsumer(address _prosumerAddress) internal{
         prosumers[_prosumerAddress] = Prosumer(_prosumerAddress,0,0,true);
     }
@@ -26,9 +26,19 @@ contract P2PEnergy{
         bool foundBuyer = false;
         for(uint i=0; i<buyerQueue.length;i++){
             if(-1*prosumers[buyerQueue[i]].energyStatus <= energyUnits){
-                prosumers[buyerQueue[i]].energyStatus += energyUnits;
-                prosumers[buyerQueue[i]].balance -= uint(energyUnits) * 1 ether;
-                prosumers[_prosumer].balance += uint(energyUnits) * 1 ether;
+                int y=energyUnits;
+                if(-1*prosumers[buyerQueue[i]].energyStatus < energyUnits){
+                    int x=energyUnits + prosumers[buyerQueue[i]].energyStatus;
+                     y= energyUnits - x;
+                     Prosumer storage sender = prosumers[_prosumer];
+                     sender.energyStatus = x;
+                     sellerQueue.push(_prosumer);
+                }
+
+                prosumers[buyerQueue[i]].energyStatus += y;
+                
+                prosumers[buyerQueue[i]].balance -= uint(y) * 1 ether;
+                prosumers[_prosumer].balance += uint(y) * 1 ether;
                 foundBuyer = true;
                 if(prosumers[buyerQueue[i]].energyStatus == 0){
                     removeAtIndex(i,buyerQueue);
@@ -43,13 +53,13 @@ contract P2PEnergy{
         }
     }
 //function to buy energy
-    function buyEnergy(address _prosumer,int energyUnits) public {
+    function buyEnergy(address _prosumer,int energyUnits) internal {
 
         bool foundSeller = false;
         for (uint i = 0; i < sellerQueue.length; i++) {
             if (prosumers[sellerQueue[i]].energyStatus >= -1 * energyUnits) {
                 prosumers[sellerQueue[i]].energyStatus += energyUnits;
-                prosumers[_prosumer].energyStatus -= energyUnits;
+                //prosumers[_prosumer].energyStatus -= energyUnits;
                 prosumers[sellerQueue[i]].balance += uint(-energyUnits) * 1 ether;
                 prosumers[_prosumer].balance -= uint(-energyUnits) * 1 ether;
                 foundSeller = true;
@@ -88,7 +98,7 @@ contract MainContract is P2PEnergy{
         uint256 amountAvailable=prosumers[msg.sender].balance;
         uint256 amountAvailableRequest=prosumers[msg.sender].balance - uint(-requestsSent) * 1 ether;
         require(amountAvailable >= energyUnits * 1 ether, " Insufficient balance in prosumer's account");
-        require(amountAvailableRequest >= energyUnits * 1 ether, "Pending request amount exceeds the available balance in prosumer's account")
+        require(amountAvailableRequest >= energyUnits * 1 ether, "Pending request amount exceeds the available balance in prosumer's");
         }
         _;
     }
