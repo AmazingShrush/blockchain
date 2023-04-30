@@ -4,7 +4,21 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"inputs": [],
+				"name": "etherRewards",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -18,7 +32,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"finalcontracts.sol": "P2PEnergy"
+			"Incentive_Mechanism.sol": "P2PEnergy"
 		},
 		"evmVersion": "berlin",
 		"libraries": {},
@@ -32,11 +46,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"finalcontracts.sol": {
-			"keccak256": "0x779af820863b20ed781f19daafca38278192028c3ac82f99e12316acbcdcaca5",
+		"Incentive_Mechanism.sol": {
+			"keccak256": "0x50f108e3376049c3855ed1b7ebba28649ca488fa04cef456173593c0bc70e8c8",
+			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://4693376a236ee8e29a9fd132f080d427a47befc280772ff989b00b21c8ef385a",
-				"dweb:/ipfs/Qme9PPPvjoLDJzmTXYxRNHrGgYAp7szh6UX6P4ypJ2WQV1"
+				"bzz-raw://a5f0c671f3ac498448dc57ef1bfa8fbe4c60e96afad7b54a89edd27cd21c4862",
+				"dweb:/ipfs/QmQcTr1ATqjsYq9v8D7kzsfixE6ytXmLgS9zpadpxS9GhR"
 			]
 		}
 	},

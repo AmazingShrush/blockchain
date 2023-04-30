@@ -11,7 +11,7 @@
 				"outputs": [
 					{
 						"internalType": "uint256",
-						"name": "balance",
+						"name": "",
 						"type": "uint256"
 					}
 				],
@@ -33,9 +33,74 @@
 			},
 			{
 				"inputs": [],
+				"name": "checkP2PContractRewards",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "checkRewardPoints",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "checkTransactions",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "noOfTransactions",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "deposit",
 				"outputs": [],
 				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "etherRewards",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_rewardPoints",
+						"type": "uint256"
+					}
+				],
+				"name": "exchangeRewardPointsForEthers",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -79,7 +144,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"finalcontracts.sol": "MainContract"
+			"Incentive_Mechanism.sol": "MainContract"
 		},
 		"evmVersion": "berlin",
 		"libraries": {},
@@ -93,11 +158,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"finalcontracts.sol": {
-			"keccak256": "0x779af820863b20ed781f19daafca38278192028c3ac82f99e12316acbcdcaca5",
+		"Incentive_Mechanism.sol": {
+			"keccak256": "0x50f108e3376049c3855ed1b7ebba28649ca488fa04cef456173593c0bc70e8c8",
+			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://4693376a236ee8e29a9fd132f080d427a47befc280772ff989b00b21c8ef385a",
-				"dweb:/ipfs/Qme9PPPvjoLDJzmTXYxRNHrGgYAp7szh6UX6P4ypJ2WQV1"
+				"bzz-raw://a5f0c671f3ac498448dc57ef1bfa8fbe4c60e96afad7b54a89edd27cd21c4862",
+				"dweb:/ipfs/QmQcTr1ATqjsYq9v8D7kzsfixE6ytXmLgS9zpadpxS9GhR"
 			]
 		}
 	},
