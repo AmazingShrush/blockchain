@@ -4,24 +4,13 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [
-			{
-				"inputs": [],
-				"name": "etherRewards",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			}
-		],
+		"abi": [],
 		"devdoc": {
+			"author": "Shrusti S. Sangodkar",
+			"details": "All function calls are currently implemented without side effects",
 			"kind": "dev",
 			"methods": {},
+			"title": "A peer to peer smart contract with an incentive mechanism",
 			"version": 1
 		},
 		"userdoc": {
@@ -32,7 +21,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"Incentive_Mechanism.sol": "P2PEnergy"
+			"finalcontracts.sol": "P2PEnergy"
 		},
 		"evmVersion": "berlin",
 		"libraries": {},
@@ -46,12 +35,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"Incentive_Mechanism.sol": {
-			"keccak256": "0x50f108e3376049c3855ed1b7ebba28649ca488fa04cef456173593c0bc70e8c8",
+		"finalcontracts.sol": {
+			"keccak256": "0xd1ad1de676bf0c913db7478334a60476136d27dde82a41727e6a533c403acd8e",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://a5f0c671f3ac498448dc57ef1bfa8fbe4c60e96afad7b54a89edd27cd21c4862",
-				"dweb:/ipfs/QmQcTr1ATqjsYq9v8D7kzsfixE6ytXmLgS9zpadpxS9GhR"
+				"bzz-raw://57dc65df4a19b56e831bc10e75e3e8f34de394ba24c63775f610257c09421515",
+				"dweb:/ipfs/QmZnqqYMqGJF47JaFKuTf55Jw5rWRxunE6dgPgspKZK8QH"
 			]
 		}
 	},
